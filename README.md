@@ -47,4 +47,4 @@
 [国光](https://www.sqlsec.com/)  
 [Github的各位开源的朋友](https://Github.com)  
 
-(截至2021/09/30 该OpenCore EFI版本为0.7.3)
+(截至2021/09/30 该OpenCore EFI版本为0.7.3 仅支持BigSur )
