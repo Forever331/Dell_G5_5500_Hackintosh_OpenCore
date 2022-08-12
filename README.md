@@ -1,13 +1,15 @@
-# Dell_G5_5500_Hackintosh
+# Dell_G5_5500_Hackintosh  
 
-### 该EFI适用于
+(截至2022/08/12 该OpenCore EFI版本为0.8.3 仅支持macOS Monterey )  
+
+## 该EFI适用于
 |硬件|型号|
 |-|:-------:|
 |CPU|Intel(R) Core(TM) i7-10750H|
 |Memory|16GB DDR4 (8Gx2)|
 |Storage|NVMe KBG40ZNS512G|
 |GPU|Intel(R) UHD Graphics|
-|GPU|NVIDIA GeForce RTX 2060 ( 无法工作 ) |
+|GPU|NVIDIA GeForce RTX 2060 ( 已屏蔽 ) |
 |Ethernet|Killer E2500 Gigabit Ethernet Controller|
 |WLAN|Killer(R) Wi-Fi 6 AX1650i 160MHz Wireless Network Adapter (201NGW)|
 |Bluetooth|英特尔(R) 无线 Bluetooth(R) (隔空投送无法使用)|
@@ -16,35 +18,47 @@
 |Thunderbolt 3|我没雷电设备 但是TypeC口插U盘是能识别的|
 |Webcam|我换了摄像头 型号就不写了 摄像头的USB端口我加入了的|
 |Card Reader|USB通道 直接插卡试一下 (设备里看不到读卡器)|
-|TouchPad & Keyboard|这俩走的PS/2通道|
-> 触摸板 因为PS/2通道的只有鼠标驱动能用 所以插入其他鼠标(USB/蓝牙)会被顶替掉 
->> 键盘没事(我不知道为啥)
+|TouchPad & Keyboard|这俩走的PS/2通道 (设置里看不到触摸板)|
+>  USB端口已使用Hackintool导出USBPorts.kext
 
->  USB端口基本都加入了有些可能没加入进去 自己在Win上面用工具抓一下 替换掉Kexts/UTBMap.kext
-
-✅ BigSur 11.6使用正常 仿冒设备(MackBook Pro16,4 i7-9750H)  
-✅ Dell热键可用  
+## 完善情况
+✅ Monterey 12.5使用正常 仿冒设备(MackBook Pro16,4 i7-9750H)  
 ✅ 键盘背光可用  
-✅ 背光正常调节  
+✅ 屏幕背光正常调节  
 ✅ 扬声器正常使用  
 ✅ 以太网网卡正常使用  
 ✅ WIFI正常使用  
 ✅ 蓝牙正常使用  
-✅ 核显正常 144hz正常  
+✅ 核显正常  
+✅ 风扇转速检测正常  
+✅ 节能正常  
+🤔 睡眠可能正常  
+🤔 正常使用比Windows续航多1小时+  
+😔 耳机插孔低音量可用(无麦克风 待修复)  
+😔 Dell热键可用(亮度无 可自行编辑快捷键)   
 ⚠️ 想要白果的自己写SMBIOS  
 ⚠️ HDMI未测试(应该用不了)  
 ⚠️ DP未测试(应该用不了?)  
-❌ 隔空投送无法使用  
-❌ RTX 2060 无法驱动  
-❌ 麦克风无法使用  
+⚠️ 屏幕无144hz(等待修复)  
+❌ 隔空投送无法使用(仅识别)  
+❌ RTX 2060 无法驱动(已屏蔽)  
+❌ 麦克风无法驱动(无驱动)  
+❌ 无法识别CPU频率(等待修复)  
 
-### macOS概览 
-鄙人对该机型的一点微小的工作
-![](https://s3.bmp.ovh/imgs/2021/09/e5b7b01c6a724619.png)
+## macOS概览 
+鄙人对该机型的一点微小的工作  
+[截图预览](Image/Preview.md)
 
-#### 鸣谢
+## 鸣谢
 [黑果小兵的部落格](https://blog.daliansky.net/)  
 [国光](https://www.sqlsec.com/)  
-[Github的各位开源的朋友](https://Github.com)  
+[黑苹果星球](https://heipg.cn/)
 
-(截至2021/09/30 该OpenCore EFI版本为0.7.3 仅支持BigSur )
+## 更新记录
+
+#### 2022/08/03 (后续可能会长期更新)
+* 更新 OpenCore 至 0.8.3 正式版
+* Driver存在 OpenHfsPlus.efi 和 HfsPlus.efi 按序开启
+
+#### 2021/09/30 
+* OpenCore EFI 0.7.3 BigSur
