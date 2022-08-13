@@ -58,7 +58,7 @@
 
 #### 2022/08/03 (后续可能会长期更新)
 * 更新 OpenCore 至 0.8.3 正式版
-* Driver存在 OpenHfsPlus.efi 和 HfsPlus.efi 按序开启
+* Driver存在 OpenHfsPlus.efi 和 HfsPlus.efi 按需开启
 
 #### 2021/09/30 
 * OpenCore EFI 0.7.3 BigSur
